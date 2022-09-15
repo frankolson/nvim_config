@@ -1,0 +1,3 @@
+# Ignore packer installed libraries
+site/pack/packer/start
+site/pack/packer/opt
