@@ -1,5 +1,6 @@
 --[[ opts.lua ]]
 local opt = vim.opt
+local g = vim.g
 local cmd = vim.api.nvim_command
 
 -- [[ Context ]]
@@ -33,3 +34,6 @@ opt.tabstop = 4                  -- num:  Number of spaces tabs count for
 -- [[ Splits ]]
 opt.splitright = true            -- bool: Place new window to right of current one
 opt.splitbelow = true            -- bool: Place new window below the current one
+
+g.markdown_syntax_conceal = 0    -- num: Disabling conceal for Markdown without disabling indentLine plugin
+g.vim_json_conceal = 0           -- num: Disabling conceal for JSON without disabling indentLine plugin
