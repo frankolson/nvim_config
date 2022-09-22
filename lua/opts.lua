@@ -40,3 +40,6 @@ opt.formatoptions = "l"
 opt.splitright = true            -- bool: Place new window to right of current one
 opt.splitbelow = true            -- bool: Place new window below the current one
 
+-- [[ Clipboard ]]
+opt.clipboard:prepend {'unnamedplus'} -- str: use the system clipboard
+
