@@ -34,6 +34,7 @@ return require('packer').startup({function(use)
     use { 'tpope/vim-fugitive' }                    -- git integration
     use { 'junegunn/gv.vim' }                       -- commit history
     use { 'windwp/nvim-autopairs' }                 -- auto close brackets, etc.
+    use { 'godlygeek/tabular' }                     -- text alignment
 end,
 config = {
     package_root = vim.fn.stdpath('config') .. '/site/pack'
