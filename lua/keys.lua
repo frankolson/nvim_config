@@ -18,7 +18,7 @@ map('n', '<leader>nf', [[:lua require('telescope.builtin').find_files({cwd='~/Do
 
 -- Misc
 map('i', '<leader><cr>', '<Esc>yyp<C-a>elC<Space>', {})     -- Auto increment markdown ordered list
-vim.keymap.set('n', '<leader>sn', function()
+vim.keymap.set('n', '<leader>sn', function()                -- Create scratch note
     local scratchNoteDirectory = "~/Documents/notes/scratch"
     local date = os.date("%Y-%m-%d")
     local filename = string.format(
