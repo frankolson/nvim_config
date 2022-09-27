@@ -16,8 +16,27 @@ map('n', '<leader>hf', [[:lua require('telescope.builtin').find_files({cwd='~/'}
 map('n', '<leader>vf', [[:lua require('telescope.builtin').find_files({cwd='~/.config/nvim'})<cr>]], {})
 map('n', '<leader>nf', [[:lua require('telescope.builtin').find_files({cwd='~/Documents/notes'})<cr>]], {})
 
--- Misc
+-- Markdown
 map('i', '<leader><cr>', '<Esc>yyp<C-a>elC<Space>', {})     -- Auto increment markdown ordered list
+vim.keymap.set('n', '<leader>ct', function()                -- Toggle markdown checkboxes
+  local line = vim.api.nvim_get_current_line()
+  local checkedRegex = vim.regex("- \\[x\\]")
+  local uncheckedRegex = vim.regex("- \\[ \\]")
+ 
+  if(checkedRegex:match_str(line))
+  then
+    local new_current_line = line:gsub("%[x%]", "[ ]")
+    vim.api.nvim_set_current_line(new_current_line)
+  end
+
+  if(uncheckedRegex:match_str(line))
+  then
+    local new_current_line = line:gsub("%[ %]", "[x]")
+    vim.api.nvim_set_current_line(new_current_line)
+  end
+end, {})
+
+-- Misc
 vim.keymap.set('n', '<leader>sn', function()                -- Create scratch note
     local scratchNoteDirectory = "~/Documents/notes/scratch"
     local date = os.date("%Y-%m-%d")
@@ -29,3 +48,4 @@ vim.keymap.set('n', '<leader>sn', function()                -- Create scratch no
     
     vim.cmd(string.format(":e %s", filename))
 end, {})
+
