@@ -7,8 +7,8 @@ map('t', 'jk', '<C-\\><C-n>', {})                           -- Escape terminal m
 
 -- Toggles
 map('n', '<leader>n', [[:NvimTreeToggle]], {})
-map('n', '<leader>l', [[:IndentLinesToggle]], {})
 map('n', '<leader>t', [[:TagbarToggle]], {})
+-- map('n', '<leader>l', [[:IndentLinesToggle]], {})
 
 -- Fuzzy Find
 map('n', '<leader>ff', [[:Telescope find_files]], {})
@@ -48,4 +48,6 @@ vim.keymap.set('n', '<leader>sn', function()                -- Create scratch no
     
     vim.cmd(string.format(":e %s", filename))
 end, {})
+map('n', '<leader>lh', string.format('Go## %s<esc>o<cr><esc>', os.date("%d %B %Y")), {})     -- create header for personal log date entry
+map('n', '<leader>le', string.format('Go**%s - location**<esc>2bviw', os.date("%-I:%M %p")), {})     -- create title for personal log single entry
 
