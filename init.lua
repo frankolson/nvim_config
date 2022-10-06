@@ -6,13 +6,21 @@
 vim.g.mapleader = ","
 vim.g.localleader = "\\"
 
--- IMPORTS
+
+-- PLUGINS
+require('plug')
+
+
+-- CONFIGURATION
 require('vars')      -- Variables
 require('opts')      -- Options
-require('keys')      -- Keymaps
-require('plug')      -- Plugins
 
--- PLUGINS: Add this section
+
+-- KEYMAPS
+require('keys')      -- Keymaps
+
+
+-- PLUGIN SETUP
 require('nvim-tree').setup{}
 require('lualine').setup {
     options = {
@@ -20,3 +28,4 @@ require('lualine').setup {
     }
 }
 require('nvim-autopairs').setup{}
+
