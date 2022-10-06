@@ -6,8 +6,7 @@ map('i', 'jk', '<Esc>', {})                                 -- Escape insert mod
 map('t', 'jk', '<C-\\><C-n>', {})                           -- Escape terminal mode
 
 -- Toggles
-map('n', '<leader>n', [[:NvimTreeToggle]], {})
-map('n', '<leader>l', [[:IndentLinesToggle]], {})
+map('n', '<leader>n', [[:NvimTreeToggle<cr>]], {})
 
 -- Fuzzy Find
 map('n', '<leader>ff', [[:Telescope find_files]], {})
