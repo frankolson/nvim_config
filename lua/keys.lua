@@ -8,13 +8,12 @@ map('t', 'jk', '<C-\\><C-n>', {})                           -- Escape terminal m
 -- Toggles
 map('n', '<leader>n', [[:NvimTreeToggle]], {})
 map('n', '<leader>l', [[:IndentLinesToggle]], {})
-map('n', '<leader>t', [[:TagbarToggle]], {})
 
 -- Fuzzy Find
 map('n', '<leader>ff', [[:Telescope find_files]], {})
-map('n', '<leader>hf', [[:lua require('telescope.builtin').find_files({cwd='~/'})<cr>]], {})
-map('n', '<leader>vf', [[:lua require('telescope.builtin').find_files({cwd='~/.config/nvim'})<cr>]], {})
-map('n', '<leader>nf', [[:lua require('telescope.builtin').find_files({cwd='~/Documents/notes'})<cr>]], {})
+map('n', '<leader>fh', [[:lua require('telescope.builtin').find_files({cwd='~/'})<cr>]], {})
+map('n', '<leader>fv', [[:lua require('telescope.builtin').find_files({cwd='~/.config/nvim'})<cr>]], {})
+map('n', '<leader>fn', [[:lua require('telescope.builtin').find_files({cwd='~/Documents/notes'})<cr>]], {})
 
 -- Markdown
 map('i', '<leader><cr>', '<Esc>yyp<C-a>elC<Space>', {})     -- Auto increment markdown ordered list
