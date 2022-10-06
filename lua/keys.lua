@@ -7,6 +7,8 @@ map('t', 'jk', '<C-\\><C-n>', {})                           -- Escape terminal m
 
 -- Toggles
 map('n', '<leader>n', [[:NvimTreeToggle<cr>]], {})
+map('n', '<leader>G', [[:Goyo <bar> lua require('lualine').hide()<cr>]], {})
+map('n', '<leader>G!', [[:Goyo <bar> lua require('lualine').hide({unhide=true})<cr>]], {})
 
 -- Fuzzy Find
 map('n', '<leader>ff', [[:Telescope find_files]], {})

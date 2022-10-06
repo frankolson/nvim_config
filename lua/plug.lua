@@ -1,10 +1,11 @@
 -- [[ plug.lua ]]
 
 return require('packer').startup({function(use)
-    use { 'wbthomason/packer.nvim' }
-    use { 'tpope/vim-fugitive' }                    -- git integration
-    use { 'windwp/nvim-autopairs' }                 -- auto close brackets, etc.
-    use { 'godlygeek/tabular' }                     -- text alignment
+    use 'wbthomason/packer.nvim'
+    use 'tpope/vim-fugitive'                        -- git integration
+    use 'windwp/nvim-autopairs'                     -- auto close brackets, etc.
+    use 'godlygeek/tabular'                         -- text alignment
+    use 'junegunn/goyo.vim'                         -- distraction free mode
     use {                                           -- fuzzy finder
         'nvim-telescope/telescope.nvim', 
         requires = {
