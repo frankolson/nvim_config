@@ -21,7 +21,11 @@ require('keys')      -- Keymaps
 
 
 -- PLUGIN SETUP
-require('nvim-tree').setup{}
+require('nvim-tree').setup{
+  git = {
+    ignore = false
+  }
+}
 require('lualine').setup {
     options = {
         theme = 'dracula-nvim'
